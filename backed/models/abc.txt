@@ -40,6 +40,19 @@ cd .\backed\
 
 
 
+{
+
+  foodcat !==[]? foodcat.map((data)=>{
+    return (
+      <div> hello world </div>
+    )
+  })
+  : ""
+}
+
+
+
+
 
 
 
