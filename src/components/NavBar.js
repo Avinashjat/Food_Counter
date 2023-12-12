@@ -1,9 +1,13 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link ,useNavigate} from "react-router-dom";
-
+import Badge from "react-bootstrap/Badge";
+import Modal from "../Modal";
+import Cart from '../Screens/Cart';
+import {  useCart } from "./ContextReducer";
 export default function NavBar() {
 
-
+  let data = useCart();
+  const [cartView, setCartView] = useState(false)
   const navigate = useNavigate();
 
   const handleLogout =()=>{
@@ -18,7 +22,7 @@ export default function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-success  ">
         <div className="container-fluid">
           <Link className="navbar-brand fs-1" to="/">
-          DashDine
+          ZingBite
           </Link>
           <button  className="navbar-toggler"  type="button"  data-bs-toggle="collapse"  data-bs-target="#navbarNav"  aria-controls="navbarNav" aria-expanded="false"aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -49,9 +53,12 @@ export default function NavBar() {
              </div>
           
           : <div>
-             <div className="btn bg-white text-success mx-2">
-            My cart
+             <div className="btn bg-white text-success mx-2" onClick={()=>{setCartView(true)}}>
+            My cart {'  '}
+            <Badge pill bg="danger "> {data.length}</Badge>
           </div>
+
+        {cartView ? <Modal onClose={() => setCartView(false)}><Cart></Cart></Modal> : ""}
 
           <div className="btn bg-white text-danger mx-2" onClick={handleLogout}>
             Logout
