@@ -4,6 +4,7 @@ import Badge from "react-bootstrap/Badge";
 import Modal from "../Modal";
 import Cart from '../Screens/Cart';
 import {  useCart } from "./ContextReducer";
+
 export default function NavBar() {
 
   let data = useCart();
@@ -37,7 +38,7 @@ export default function NavBar() {
 
               {(localStorage.getItem("authToken"))?
               <li className="nav-item ">
-              <Link className="nav-link active fs-4" aria-current="page" to="/">
+              <Link className="nav-link active fs-4" aria-current="page" to="/myOrder">
                My Orders
               </Link>
             </li>

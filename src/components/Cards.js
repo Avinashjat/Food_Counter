@@ -27,6 +27,7 @@ const handleAddToCard = async ()=>{
   console.log(new Date())
   if (food.length !== 0) {
     if (food.size === size) {
+      
       await dispatch({ type: "UPDATE", id: props.foodItem._id, price: finalPrice, qty: qty })
       return
     }
