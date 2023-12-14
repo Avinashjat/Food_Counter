@@ -58,7 +58,7 @@ let finalPrice = qty* parseInt(options[size]);
       <div>
         {" "}
         <div
-          className="card mt-3"
+          className="card mt-3 main-card "
           style={{ width: "18rem", maxHeight: "360px" }}
         >
           <img src={props.foodItem.img} className="card-img-top" alt="..." style={{height:"150px" ,objectFit:"fill"}} />

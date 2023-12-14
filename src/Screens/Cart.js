@@ -55,9 +55,9 @@ export default function Cart() {
                 <th scope='row' >{index + 1}</th>
                 <td >{food.name}</td>
                 <td>{food.qty}</td>
-                <td>{food.size}</td>
+                <td>{food.size}</td>                                         
                 <td>{food.price}</td>
-                <td ><button type="button" className="btn p-0"> <div onClick={()=>{ dispatch({ type: "REMOVE",index:index})}}>Delete</div> </button> </td></tr>
+                <td ><button type="button" className="btn p-0"> <i class="fa-solid fa-trash" onClick={()=>{ dispatch({ type: "REMOVE",index:index})}}></i>   </button> </td></tr>
             ))}
           </tbody>
         </table>
@@ -73,7 +73,7 @@ export default function Cart() {
   )
 }
 
-
+{/* <div onClick={()=>{ dispatch({ type: "REMOVE",index:index})}}>Delete</div>  */}
 
 
 

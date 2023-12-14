@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@200&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, rgb(98, 95, 142) 0%, rgb(123, 78, 182) 35%, rgb(98, 139, 148) 100%) !important;
+    font-family: 'Poppins',sans-serif;
+}
+
+.cont{
+    width: 400px !important;
+    height: 40% !important;
+    background-color: rgb(41, 43, 43) !important;
+    padding: 50px;
+    border-radius: 17px;
+    position: relative;
+    top: 100px;
+    color: white !important;
+}
+
+/* .frm-contr{
+   color: rgba(0,0,0,.87) !important;
+   border-bottom-color:rgba(46, 45, 45, 0.42) !important;
+   box-shadow: none !important ;
+   border: none !important;
+   border-bottom: 1px solid !important;
+   border-radius: 4px 4px 0 0 !important;
+   
+} */
+
+
+@media screen and (min-width: 1000px) {
+    
+  }
+
+  /* .cardContainerStyle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+   
+ } */
+
+ .cardContainerStyle{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 70px 168px;
+ }
